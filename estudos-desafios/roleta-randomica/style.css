@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter;
+  text-align: center;
+  background-color: #cfcfcf;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body > section {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+h1 {
+  color: #01296d;
+  font-size: 48px;
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #01296d;
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn {
+  background-color: #01296d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 20px auto;
+  min-width: 100%;
+  padding: 10px;
+  width: 40%;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0e43a0;
+}
+
+#container-entrada {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  max-width: 500px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+textarea {
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+textarea:focus {
+  outline: 2px solid #f05025;
+}
+
+.oculto {
+  display: none;
+}
+
+.roletaContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  width: 500px;
+}
+
+#whell {
+  background-color: #f9e7e2;
+  padding: 19px;
+  border-radius: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.triangulo {
+  position: absolute;
+  top: 241px;
+  right: 0px;
+  transform: rotate(270deg);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid black;
+  z-index: 10;
+}
+
+#whell-wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+}
+
+#roletaSection {
+  margin-top: -20px;
+}
+
+#girarRoleta {
+  display: flex;
+  max-width: 300px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.popup.abrirPopup {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popupModal {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#fecharPopup {
+  background: #f05025;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 15px 40px;
+  font-weight: 600;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#fecharPopup:hover {
+  background: #d03f1e;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #girarRoleta {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  .triangulo {
+    position: absolute;
+    top: 48%;
+    right: 0px;
+    transform: rotate(270deg);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid black;
+    z-index: 10;
+  }
+
+  .btn {
+    background-color: #f05025;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 5px auto;
+    min-width: 100%;
+    padding: 10px;
+    width: 40%;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #d03f1e;
+  }
+
+  h1 {
+    color: #1c3664;
+    font-size: 38px;
+    margin: 0;
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+}

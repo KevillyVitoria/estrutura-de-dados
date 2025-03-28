@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Roleta de prêmios</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <section>
+        <h1>Roleta de Prêmios</h1>
+    <div id="container-entrada">
+        <h2>Personalize Sua Roleta</h2>
+        <label for="roletapremios"
+        >Separe os prêmios por quebra de linha:</label>
+      <textarea
+        id="roletapremios"
+        rows="15"
+        placeholder="Digite aqui!"
+      ></textarea>
+        <button id="botaoRoleta" class="btn">Ir para Roleta</button>
+    </div>
+    <div id="popup" class="popup oculto">
+        <div class="popupModal">
+            <div id="popupAlerta"></div>
+            <button id="fecharPopup">Fechar</button>
+        </div>
+    </div>
+   
+    <div id="roletaContainer" class="oculto">
+        <div id="whell-wrapper">
+            <div id="triangulo" class="triangulo"></div>
+            <canvas id="whell" width="500" height="500">
+            </canvas>
+            </div>
+            <div id="result"></div>
+            <div id="girarRoleta">
+                <button id="botaoGirar" class="btn">Girar</button>
+                <button id="botaoTelaInicial" class="btn">Voltar para Página Inicial</button>
+            </div>
+        </div>
+    </div>
+    <audio id="audioRoleta" src="./sounds/audioroleta.m4a"></audio>
+    <script type="module" src="./script.js"></script>
+    </section>
+</body>
+</html>
